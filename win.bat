@@ -1,1 +1,1 @@
-node myProject.js credentials.json Liverpool
+node automatingEPL.js credentials.json Liverpool
