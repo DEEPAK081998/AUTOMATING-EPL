@@ -24,9 +24,6 @@ let Info=[];
         let pages=await browser.pages();
         let page=pages[0];
         await page.goto(url,{waitUntil:"networkidle2",timeout:60000});
-        // await page.waitForNavigation({timeout:60000,waitUntil:"networkidle2"});
-        // await Promise.all([page.click("#mainNav a"),page.waitForNavigation({timeout:60, waitUntil:"networkidle2"})]);     
-        // await page.waitForSelector("section[id=mainNav]");
           
         //****************************Signing in ***************************8*/
         
@@ -59,7 +56,6 @@ let Info=[];
         // console.log(teams.length);
         await choose(page,teams);
         await page.waitForSelector(".fixtures .fixtures__matches-list");
-        // await page.screenshot({path:"fixture.png", fullPage: true});
 
         //********************creating table ********************************//
         await page.waitForSelector(".matchList")
